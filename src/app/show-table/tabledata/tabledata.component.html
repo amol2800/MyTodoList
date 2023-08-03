@@ -1,0 +1,16 @@
+
+
+<table class="table m-auto">
+    <tr class="bg-primary">
+    <th>Task Name</th>
+    <th>Task Status</th>
+    <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let data of GetFormData">
+        <td>{{data.taskname}}</td>
+        <td>{{data.status}}</td>
+        <td><button class="btn btn-info" (click)="editData(data)" routerLink="/form">Edit</button> &nbsp;
+            <button class="btn btn-info" (click)="deleteData(data)">delete</button></td>
+    </tr>
+</table>

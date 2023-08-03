@@ -1,0 +1,26 @@
+
+
+
+<form class="form" [formGroup]="myform"   action="" >
+<h1 class="text-center  fs-2 mb-3 pt-" style="color: red;">Todo Form</h1>
+
+<div class="form-group ">
+    <label class="fw-bold"  >Task Name</label>
+    <input class="form-control" placeholder="task name"  type="" formControlName="taskname" value="">
+</div>
+
+<div class="form-group">
+    <div><label class="fw-bold mt-1" for="">Task Status</label></div>
+    <input class="radio"  type="radio" name="status" value="complit"  formControlName="status" />
+    <label class="radio-label"> Complit</label> &nbsp;
+    <input class="radio" type="radio" name="status" value="not complit"  formControlName="status" />
+    <label class="radio-label">Not Complit</label> &nbsp;
+    <input class="radio" type="radio" name="status" value="Pending" formControlName="status" />
+    <label class="radio-label">Pending</label>
+</div>
+<div class="text-center">
+ <button class="btn btn-info mt-3" (click)="submitfun()" routerLink="/table">Submit</button> &nbsp;
+ <button class="btn btn-info mt-3" (click)="updataData()">Update</button>
+</div>
+
+</form>
